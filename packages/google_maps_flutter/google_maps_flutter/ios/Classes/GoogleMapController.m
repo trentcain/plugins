@@ -542,6 +542,10 @@ static double ToDouble(NSNumber* data) { return [FLTGoogleMapJsonConversions toD
   [_channel invokeMethod:@"map#onLongPress" arguments:@{@"position" : LocationToJson(coordinate)}];
 }
 
+- (void)mapView:(GMSMapView*)mapView didTapPOIWithPlaceID:(NSString *)placeID name:(NSString *)name location:(CLLocationCoordinate2D)location {
+  [_channel invokeMethod:@"map#onPoiClick" arguments:@{@"position" : LocationToJson(coordinate), @"name" : name, @"placeId" : placeID, }];
+}
+
 @end
 
 #pragma mark - Implementations of JSON conversion functions.
