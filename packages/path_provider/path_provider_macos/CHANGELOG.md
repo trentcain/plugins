@@ -1,3 +1,16 @@
+## NEXT
+
+* Updates minimum Flutter version to 2.10.
+
+## 2.0.6
+
+* Fixes library_private_types_in_public_api, sort_child_properties_last and use_key_in_widget_constructors
+  lint warnings.
+
+## 2.0.5
+
+* Removes dependency on `meta`.
+
 ## 2.0.4
 
 * Switches to a package-internal implementation of the platform interface.

@@ -3,9 +3,9 @@
 // found in the LICENSE file.
 
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:quick_actions_platform_interface/types/types.dart';
 
 import '../method_channel/method_channel_quick_actions.dart';
+import '../types/types.dart';
 
 /// The interface that implementations of quick_actions must implement.
 ///
@@ -32,7 +32,7 @@ abstract class QuickActionsPlatform extends PlatformInterface {
   // TODO(amirh): Extract common platform interface logic.
   // https://github.com/flutter/flutter/issues/43368
   static set instance(QuickActionsPlatform instance) {
-    PlatformInterface.verifyToken(instance, _token);
+    PlatformInterface.verify(instance, _token);
     _instance = instance;
   }
 
